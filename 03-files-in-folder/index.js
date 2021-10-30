@@ -6,7 +6,8 @@ fs.readdir(
   path.join(__dirname, "secret-folder"),
   { withFileTypes: true },
   (err, files) => {
-    console.log("\nCurrent directory files:");
+    console.log("\nФайлы текущей папки:\n");
+
     if (err) console.log(err);
     else {
       files.forEach((file) => {
