@@ -20,7 +20,7 @@ const output = fs.createWriteStream(
   path.join(__dirname, "project-dist", "style.css")
 );
 
-//! Get template
+//! Получение шаблона
 fs.readFile(
   path.join(__dirname, "template.html"),
   "utf8",
@@ -39,7 +39,7 @@ fs.readFile(
   }
 );
 
-//! Get html
+//! Получение html
 fs.readdir(
   path.join(__dirname, "components"),
   { withFileTypes: true },
@@ -79,7 +79,7 @@ fs.readdir(
   }
 );
 
-//! Get styles
+//! Получение стилей
 fs.readdir(
   path.join(__dirname, "styles"),
   { withFileTypes: true },
@@ -106,7 +106,7 @@ fs.readdir(
   }
 );
 
-//! Assets to copy
+//! Копирование папки assets
 function copyFiles(src, copy) {
   fs.readdir(src, (err, files) => {
     err ? console.log(err) : null;
